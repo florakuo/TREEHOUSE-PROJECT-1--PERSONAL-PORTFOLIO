@@ -1,0 +1,312 @@
+/* Global Layout Set-up */
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;;
+  color: #5C5C5C;
+  background:#e8e7df;
+  font-size:18px;
+  line-height:1.5em;
+
+}
+
+.section{
+  width:100%;
+  margin-top:60px;
+}
+
+h2{
+  font-family: 'Playfair Display', serif;
+}
+
+
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  min-height: 45px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+    color:#fff;
+    display: block;
+    margin-right: auto;
+
+    
+}
+.nav li {
+  padding: 5px 10px 10px 10px;
+  font-size:16px;
+}
+.nav a {
+  transition: all .5s;
+}
+.nav a:hover {
+  color: white;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(0deg, #272727 , transparent 50%),
+              url('https://images.unsplash.com/photo-1466971060667-16467c7d04ee?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d6160f1c19b4cfdd07911d9febfd7e78') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 420px;
+  line-height: 1.5;
+
+}
+
+
+.profile-image {
+  /*float:left;*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: all .5s;
+
+}
+.profile-image:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+.tag {
+  color:#fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+
+} 
+.solgan {
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+/*第一部分：個人介紹*/
+.about{
+  padding:100px 30px 100px;
+  width:1000px;
+  margin:0 auto;
+  position:relative;
+}
+
+.about h2{
+  width: 310px;
+  height: 310px;
+  background: url('images/personal-profile title.png') no-repeat top left;
+  display: block;
+  float: left;
+  text-indent:-99px;
+  margin-top:-60px;
+
+}
+
+.about h3 {
+  line-height:1.2em;
+  padding-bottom:10px;
+}
+
+.description {
+  text-align:justify;
+  margin-right:-20px;
+}
+
+/*第二部分：能力*/
+.services {
+  margin-bottom:100px;
+}
+
+
+.service-container {
+  display:block;
+  width:100%;
+  max-width:1000px;
+  margin:40px auto;
+  
+}
+
+.service {
+  position:relative;
+  display:inline-block;
+  width:30%;
+  
+  
+}
+
+.logo {
+  border:1px solid #5C5C5C;
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  line-height:100px;
+  margin:0 auto 40px;
+  text-align:center;
+  font-size:2em;
+
+}
+
+.logo::after{
+  font-family: FontAwesome;
+  right: 15px;
+  top: 23px;
+  z-index: 2;
+  width: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.skill1::after {
+  content: "\f1c9";
+}
+
+.skill2::after {
+  content: "\f0d0";
+}
+
+.skill3::after {
+  content: "\f108";
+}
+
+
+/*第三部分：作品集 */
+.section3{
+  display: -ms-flex;
+  display:flex;
+  max-width:1000px;
+  -ms-flex-pack: distribute;
+  justify-content:space-around;
+  flex-direction: row;
+  flex-wrap:wrap;
+  margin:30px auto;
+}
+
+.item1 {
+  width:655px;
+  height:344px;
+  background: linear-gradient(0deg, #272727 , transparent 50%),
+              url('images/rsz_portfolio-01.jpg') no-repeat top center; 
+  margin:10px auto 0;
+  transition: all .5s;
+}
+
+.item2 {
+  width:320px;
+  height:344px;
+  background-color:tomato;
+  margin:10px auto 0;
+}
+
+
+
+.pro2{
+  background: linear-gradient(0deg, #272727 , transparent 50%),
+              url('images/rsz_portfolio-02.jpg') no-repeat top center; 
+}
+
+.pro3{
+  background: linear-gradient(0deg, #272727 , transparent 50%),
+              url('images/rsz_portfolio-03.jpg') no-repeat top center; 
+}
+
+.pro4{
+  background: linear-gradient(0deg, #272727 , transparent 50%),
+              url('images/rsz_portfolio-04.jpg') no-repeat top center; 
+}
+
+.pro5{
+  background: linear-gradient(0deg, #272727 , transparent 50%),
+              url('images/rsz_portfolio-05.jpg') no-repeat top center; 
+}
+
+.pro_p{
+  margin:150px auto;
+  color:#fff;
+  text-shadow: 2px 2px 5px #050505;
+}
+
+/*footer*/
+footer {
+  background:#c0ac90;
+  height:90px;
+  width: 100%;
+  color:#fff;
+  position:relative;
+  display:block;
+  
+}
+
+/*可以用增加p的邊匡來看該div 佔多少寬*/
+footer .left {
+  float:left;
+  width:30%;/*控制寬的佔比，調整位置*/
+  
+
+}
+
+.mail{
+  height:17px;
+  margin:10px 0 25px 50px;
+}
+
+
+.mail::before {
+  content: "\f003";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.6em;
+  padding-right: 0.5em;
+  left: 0;
+}
+
+
+footer a {
+  cursor: pointer;
+  text-decoration: none;
+  color:#fff;
+  font-size: .6em;
+}
+
+
+footer .right{
+  float:right; 
+  width:30%;
+  padding:0 30px;
+  margin:0 30px;
+  
+
+}
+
+footer .copyright {
+  font-size: .6em;
+}
+
+
