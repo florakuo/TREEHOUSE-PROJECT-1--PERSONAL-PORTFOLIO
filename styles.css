@@ -1,23 +1,20 @@
-/* Global Layout Set-up */
+/* ================================= 
+  Base Styles
+==================================== */
 * { 
   box-sizing: border-box;
+  vertical-align: middle;
 }
   
 body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Raleway', sans-serif;;
+  font-family: 'Raleway', sans-serif;
   color: #5C5C5C;
-  background:#e8e7df;
+  background:#fff;
   font-size:18px;
   line-height:1.5em;
-
-}
-
-.section{
-  width:100%;
-  margin-top:60px;
 }
 
 h2{
@@ -25,27 +22,34 @@ h2{
 }
 
 
-
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color:#a5a5a7;
 }
 a:hover {
   color: #6633ff;
 }
 
-/* Section Styles */
 
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
 .main-nav {
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
   min-height: 45px;
   padding: 10px;
   position: fixed;
   text-align: center;
+  background:#fff;
+
+  
 }
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -56,7 +60,7 @@ a:hover {
 }
 
 .nav .name {
-    color:#fff;
+    color:#c0ac90;
     display: block;
     margin-right: auto;
 
@@ -73,15 +77,12 @@ a:hover {
   color: white;
 }
 
-header {
+.top_banner {
   text-align: center;
-  background: linear-gradient(0deg, #272727 , transparent 50%),
-              url('https://images.unsplash.com/photo-1466971060667-16467c7d04ee?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d6160f1c19b4cfdd07911d9febfd7e78') no-repeat top center ;
+  background: url('images/rsz_woman-standing-alone-on-a-large-wooden-pier-on-a-lake-picjumbo-com-small.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
-  padding-top: 420px;
   line-height: 1.5;
-
 }
 
 
@@ -102,30 +103,32 @@ header {
   padding: 10px;
   border-radius: 5px;
   display: table;
-  margin: 10px auto;
-
+  margin: 50px auto;
+  padding-bottom: 0px;
 } 
-.solgan {
-  color: #fff;
-  padding-bottom: 60px;
+
+.slogan {
+  color:#969696;
 }
 
+/* ---- Layout Containers ---- */
+
+
 /*第一部分：個人介紹*/
+
+.container{
+  width:100%;
+  margin-top:60px;
+}
+
 .about{
-  padding:100px 30px 100px;
-  width:1000px;
+  width:100%;
   margin:0 auto;
-  position:relative;
+  padding: 0 10px;
 }
 
 .about h2{
-  width: 310px;
-  height: 310px;
-  background: url('images/personal-profile title.png') no-repeat top left;
-  display: block;
-  float: left;
-  text-indent:-99px;
-  margin-top:-60px;
+  /*background: url('images/personal-profile title.png') no-repeat top left;*/
 
 }
 
@@ -136,40 +139,32 @@ header {
 
 .description {
   text-align:justify;
-  margin-right:-20px;
+  padding: 0 10px;
 }
 
-/*第二部分：能力*/
-.services {
-  margin-bottom:100px;
-}
-
-
-.service-container {
-  display:block;
-  width:100%;
-  max-width:1000px;
-  margin:40px auto;
-  
-}
+/*skill*/
 
 .service {
-  position:relative;
-  display:inline-block;
-  width:30%;
-  
-  
+  margin-top: 40px;
+
+}
+
+.col {
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .logo {
-  border:1px solid #5C5C5C;
+  border:1px solid #969696;
   border-radius:50%;
   width:100px;
   height:100px;
   line-height:100px;
-  margin:0 auto 40px;
   text-align:center;
   font-size:2em;
+  float:left;
+  margin-left:20px;
+  margin-top: -4px;
 
 }
 
@@ -181,6 +176,7 @@ header {
   width: 20px;
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
+  color: #969696;
 }
 
 .skill1::after {
@@ -195,9 +191,8 @@ header {
   content: "\f108";
 }
 
-
 /*第三部分：作品集 */
-.section3{
+.profile_item{
   display: -ms-flex;
   display:flex;
   max-width:1000px;
@@ -252,12 +247,132 @@ header {
   text-shadow: 2px 2px 5px #050505;
 }
 
-/*footer*/
 footer {
   background:#c0ac90;
   height:90px;
   width: 100%;
   color:#fff;
+
+}
+
+.mail::before {
+  content: "\f003";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.6em;
+  padding-right: 0.5em;
+  left: 0;
+}
+
+footer a {
+  cursor: pointer;
+  text-decoration: none;
+  color:#fff;
+  font-size: .6em;
+}
+
+footer .copyright {
+  font-size: .6em;
+}
+
+/* ---- Page Elements ---- */
+
+.anchor{
+  display: block;
+  height: 100px; /*same height as header*/
+  margin-top: -115px; /*same height as header*/
+  visibility: hidden;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+
+  .container {
+    width: 90%;
+    margin: 10px auto;
+    padding-top: -200px;
+    position: relative;
+
+
+  }
+
+  .about {
+    margin-bottom: 360px;
+  }
+
+  .about_mainpoint {
+    float: left;
+    margin: 0;
+
+  }
+
+  .description {
+    float: right;
+    margin: 0;
+  }
+
+  .logo {
+    float: none;
+    margin: 0 auto;
+}
+
+.service-container{
+  display: inline-block;
+  width: 100%;
+}
+
+.service {
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  vertical-align: top;
+
+}
+
+.service h3,
+.service p {
+  display: inline-block;
+
+
+}
+
+.service h3 {
+    padding-top: 5px;
+}
+
+.service p {
+  width: 100%;
+}
+
+
+}
+
+
+
+@media (min-width:1024px) {
+
+.about_mainpoint {
+    width: 40%;
+    padding-left: 150px;
+    padding-top: 100px;
+}
+
+.description {
+    width: 60%;
+    padding-right: 100px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+
+/*footer*/
+footer {
   position:relative;
   display:block;
   
@@ -276,37 +391,11 @@ footer .left {
   margin:10px 0 25px 50px;
 }
 
-
-.mail::before {
-  content: "\f003";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.6em;
-  padding-right: 0.5em;
-  left: 0;
-}
-
-
-footer a {
-  cursor: pointer;
-  text-decoration: none;
-  color:#fff;
-  font-size: .6em;
-}
-
-
 footer .right{
   float:right; 
   width:30%;
   padding:0 30px;
   margin:0 30px;
-  
-
+  }
 }
-
-footer .copyright {
-  font-size: .6em;
-}
-
 

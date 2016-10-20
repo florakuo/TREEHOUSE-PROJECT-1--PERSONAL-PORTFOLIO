@@ -13,74 +13,82 @@
 </head>
 
 <body>
+    <header>
     <div class="main-nav">
         <ul class="nav">
             <li class="name">Flora Kuo</li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Service</a></li>
-            <li><a href="#profile">Portofolio</a></li>
+            <li><a href="#section1">About</a></li>
+            <li><a href="#section2">Service</a></li>
+            <li><a href="#section3">Portofolio</a></li>
         </ul>
     </div>
-    <header>
-        <h1 class="tag solgan">Make a Change</h1>
+    </header>
+
+    <div class="top_banner">
+        <h1 class="tag slogan">Make a Change</h1>
         <img src="images/flora-1.jpg" alt="picture of florakuo" class="profile-image">
         <p class="tag name">Flora Kuo | Front End Engineer</p>
-    </header>
+    </div>
+
+  <div class="wrap">  
   
   <!--第一部分：個人介紹-->
-        <div class="about" id="about">
-            <h2></h2>
+        <span class="anchor" id="section1"></span> 
+        <div class="container about" id="about"> 
+            <div class="about_mainpoint">
+            <h2>A Person who is passionate web design</h2>
+            </div>
             <div class="description">
-            <h3>Stepping out of our comfortzone is a way to find our true pontentional.</h3>
+            <h3>"Stepping out of our comfortzone is a way to find our true pontentional."</h3>
             <p>
             I've worked in web industry as marketing planner for two years.I like marketing which can make the world more fun. Now, I am on the way to be a front end engineer who can provide a better user experience and solve problems on web design.Learning coding helping me to have better logic and expend my ability to solve problems.</p>
-            </div>
-        </div>
+            </div><!--/.description-->  
+        </div><!--/.container-->  
 
   <!--第二部分：能力-->
-        <section class="services" id="services">
+        <span class="anchor" id="section2"></span>
+        <div class="container">
+            <div class="col skills">    
             <h2>Skill</h2>
             <div class="service-container">
-              
               <div class="service">
                 <div class="logo skill1"></div>
                 <h3>HTML</h3>
                 <p>Clean HTML5 Code</p>
-                </div>
+                    </div><!--/.service-->
               
-              <div class="service">
+                    <div class="service">  
                 <div class="logo skill2"></div>
                 <h3>CSS</h3>
                 <p>Morden and DRY CSS styles</p>
-                </div>
+                    </div><!--/.service-->
               
-              <div class="service">
+                    <div class="service">  
                 <div class="logo skill3"></div>
-                <h3>Responsive Design</h3>
+                    <h3>Responsive</h3>
                 <p>User Friendly Website</p>
-                </div>
-              
-              </div>
-              <div class="clear"></div>
-              </section>  
-                
-                
-    
+                    </div><!--/.service-->
+                </div><!--/.service-container-->  
+            </div><!--/.col-->          
+        </div><!--/.container-->       
+
 <!--第三部分：作品集-->
-        <section class="profile" id="profile">
-        <h2>Portofolio</h2>
-        <div class="section3">
+        <span class="anchor" id="section3"></span>
+        <div class="container">
+            <div class="col profile" id="profile">
+            <h2>Portfolio</h2>
+            <div class="profile_item">
         <div class="item1"><p class="pro_p">HELLO WORLD!</p></div>
         <div class="item2 pro2"><p class="pro_p">HE & SHE</p></div>
         <div class="item2 pro3"><p class="pro_p">BE STRONGER.co</p></div>
         <div class="item2 pro4"><p class="pro_p">HEY!YOU</p></div>
-        <div class="item2 pro5"><p class="pro_p">WESTEND Market</p></div>
-        </div>
-        </section>
-
+                <div class="item2 pro5"><p class="pro_p">WESTEND Market</p></div><!--/.profile_item-->  
+            </div><!--/.profile-->  
+        </div><!--/.container-->
+    </div><!--/.wrap-->    
 
 <!--footer-->
-    <footer>
+    <footer class="main-footer clearfix">
         <div class="left">
         <p class="mail">
         <a href="mailto:">florapenguin@gmail.com</a></p>
@@ -90,5 +98,6 @@
         <p class="copyright"><span>&copy; Copyright 2016, Flora Kuo All Right Reserved</span></p>
         </div>
     </footer>
+
 </body>
 </html>
